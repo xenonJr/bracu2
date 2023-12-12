@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <!---FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css"
+        integrity="sha512-f2MWjotY+JCWDlE0+QAshlykvZUtIm35A6RHwfYZPdxKgLJpL8B+VVxjpHJwZDsZaWdyHVhlIHoblFYGkmrbhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!---CSS LINK-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/component/login.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-main">
+            <div class="logo">
+                <img src="./assets/images/brand/logo/logo-white.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-main">
+            <div class="banner-content">
+                <div class="banner-title">
+                    <h1>Welcome to our new campus.</h1>
+                </div>
+
+                <div class="login-area" id="loginArea">
+                    <!---LOGING BUTTON -->
+                    <div class="login-btn" id="loginBtn">
+                        <button id="loginBtn">Please Login with Your Email <span><i class="fa fa-arrow-right"></i></span></button>
+                    </div>
+                    <!---SELECT LOGING TYPE -->
+                    <div class="other-btn" id="otherBtn">
+                        <ul>
+                            <li><button>Please select one</button></li>
+                            <li><a href="./index.html"><button onclick="facultyLogin()">Faculty <span><i
+                                                class="fa fa-arrow-right"></i></span></button></a></li>
+                            <li><a href="./index.html"><button onclick="studentLogin()">Student <span><i
+                                                class="fa fa-arrow-right"></i></span></button></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!---JAVA SCRIPT CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loginBtn').click(function () {
+                $('#loginArea').addClass('height-170');
+                $('#loginBtn').addClass('isInactive');
+                $('#otherBtn').addClass('isActive');
+            })
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
